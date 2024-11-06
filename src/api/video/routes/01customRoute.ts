@@ -5,5 +5,25 @@ export default{
             path:"/video/:id/comment",
             handler:"video.comment"
         },
+        {
+            method:"PUT",
+            path:"/video/:id/like",
+            handler:'video.like'
+        },
+        {
+            method:"PUT",
+            path:"/video/:id/dislike",
+            handler:'video.dislike'
+        },
+        {
+            method:'PUT',
+            path:'/video/:id/addToPlaylist',
+            handler:'video.addToPlaylist'
+        },
+        {
+            method:'PUT',
+            path:'/video/:id/removeFromPlaylist',
+            handler:'video.removeFromPlaylist'
+        }
     ]
 }

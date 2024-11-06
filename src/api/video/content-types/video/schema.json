@@ -33,12 +33,6 @@
     "views": {
       "type": "biginteger"
     },
-    "likes": {
-      "type": "biginteger"
-    },
-    "dislikes": {
-      "type": "biginteger"
-    },
     "comments": {
       "type": "relation",
       "relation": "oneToMany",
@@ -56,6 +50,18 @@
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "inversedBy": "videos"
+    },
+    "likes": {
+      "type": "json"
+    },
+    "playlists": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::playlist.playlist",
+      "inversedBy": "videos"
+    },
+    "dislikes": {
+      "type": "json"
     }
   }
 }
